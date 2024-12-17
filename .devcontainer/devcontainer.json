@@ -15,15 +15,9 @@
                 "python.pythonPath": "/usr/local/bin/python",
                 "python.linting.enabled": true,
                 "python.linting.pylintEnabled": true,
-                "python.formatting.provider": "black",
-                "editor.formatOnSave": true
-            },
-            "extensions": [
-                "ms-python.python",
-                "ms-vscode.vscode-typescript-tslint",
-                "esbenp.prettier-vscode"
-            ]
+                "python.formatting.provider": "black"
+            }
         }
     },
-    "postCreateCommand": "if [ -d \"client\" ]; then npm install --prefix client; fi && if [ -d \"server\" ]; then npm install --prefix server; fi && if [ -f \"setup.py\" ]; then python setup.py install; fi"
+    "postCreateCommand": "npm install --prefix client && npm install --prefix server",
 }

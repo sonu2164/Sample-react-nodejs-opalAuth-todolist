@@ -48,6 +48,7 @@ services:
   opal_client:
     build:
       context: .
+      dockerfile: Dockerfile
     environment:
       - OPAL_SERVER_URL=http://opal_server:7002
       - OPAL_LOG_FORMAT_INCLUDE_PID=true
@@ -62,5 +63,4 @@ services:
     depends_on:
       - opal_server
       - example_db
-
     command: sh -c "./wait-for.sh opal_server:7002 example_db:3306 --timeout=20 -- ./start.sh"
