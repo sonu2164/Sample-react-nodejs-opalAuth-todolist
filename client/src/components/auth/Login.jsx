@@ -32,7 +32,7 @@ const Login = ({ setIsAuthenticated, setShowRegister }) => {
             };
 
             const body = JSON.stringify(userData);
-            const res = await axios.post('/user/login', body, config);
+            const res = await axios.post('/api/auth/login', body, config);
 
             const { token } = res.data;
             localStorage.setItem('token', token);

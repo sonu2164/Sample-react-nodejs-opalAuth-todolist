@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from './utils/axiosConfig';
 
@@ -9,6 +10,8 @@ import Note from './components/Note';
 import CreateArea from './components/CreateArea';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import './App.css';
 const config = {
   headers: {
     'Content-Type': 'application/json',
@@ -36,7 +39,7 @@ const App = () => {
 
   const getNotes = async () => {
     try {
-      const res = await axios.get('/notes');
+      const res = await axios.get('/api/notes');
       setNotes(res.data);
     } catch (err) {
       console.error(err);
@@ -46,14 +49,14 @@ const App = () => {
   const addNote = async (note) => {
     try {
       if (noteIdToUpdate) {
-        const response = await axios.post(`/note/update/`, { ...note, noteId: noteIdToUpdate }, config);
+        // const response = await axios.post(`/api/notes/update/`, { ...note, noteId: noteIdToUpdate }, config);
 
-        getNotes();
-        setNoteIdToUpdate(null);
-        setIsClicked(false);
-        toast.success('Note updated successfully');
+        // getNotes();
+        // setNoteIdToUpdate(null);
+        // setIsClicked(false);
+        // toast.success('Note updated successfully');
       } else {
-        const res = await axios.post('/newNote', note, config);
+        const res = await axios.post('/api/notes', note, config);
         setNotes([...notes, res.data]);
         toast.success('Note added successfully');
       }
@@ -70,7 +73,7 @@ const App = () => {
 
   const deleteNote = async (id) => {
     try {
-      await axios.post(`/note/delete/`, { noteId: id }, config);
+      await axios.post(`/api/notes/delete`, { noteId: id }, config);
       getNotes();
       toast.success('Note deleted successfully');
     } catch (err) {

@@ -166,7 +166,7 @@ const Register = ({ setIsAuthenticated, setShowRegister }) => {
                 };
 
                 const body = JSON.stringify(newUser);
-                const res = await axios.post('/user/register', body, config);
+                const res = await axios.post('/api/auth/register', body, config);
 
                 const { token } = res.data;
                 localStorage.setItem('token', token);
