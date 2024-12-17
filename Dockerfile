@@ -1,9 +1,10 @@
-# FROM permitio/opal-client:latest
-# COPY --chown=opal . /app/
-# RUN cd /app && python setup.py install --user
-
 # Use the official Opal client image as a base
 FROM permitio/opal-client:latest
+
+# Install Node.js and npm
+RUN apt-get update && apt-get install -y curl && \
+    curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs
 
 # Set the working directory
 WORKDIR /app
