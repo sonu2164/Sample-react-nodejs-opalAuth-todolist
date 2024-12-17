@@ -17,7 +17,7 @@ It is a note sharing webapp, where user's can share notes and see other's notes.
 
 4. **Start the Application**:  
    *Start the server*
-   -Before starting the server, make .env (use .env.example in this repo) file in 'backend' folder.
+   -Before starting the server, make .env (use .env.example in backend folder) file in 'backend' folder.
    
    Now execute the following commands in `server` directory to start the server:
    ```bash
