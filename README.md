@@ -10,7 +10,7 @@ It is a note sharing webapp, where user's can share notes and see other's notes.
 1. **Install Daytona**: Follow the [Daytona installation guide](https://www.daytona.io/docs/installation/installation/).  
 2. **Create the Workspace**:  
    ```bash  
-   daytona create [https://github.com/sonu2164/Sample-react-nodejs-opal-auth-todolist](https://github.com/sonu2164/Sample-react-nodejs-opalAuth-todolist)
+   daytona create https://github.com/sonu2164/Sample-react-nodejs-opalAuth-todolist
    ```  
 
 ... MORE STEPS IF NEEDED ...
