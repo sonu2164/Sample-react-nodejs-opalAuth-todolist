@@ -17,6 +17,7 @@ It is a note sharing webapp, where user's can share notes and see other's notes.
 
 4. **Start the Application**:  
    *Start the server*
+   -Before starting the server, make .env (use .env.example in this repo) file in 'backend' folder.
    
    Now execute the following commands in `server` directory to start the server:
    ```bash
@@ -28,7 +29,6 @@ It is a note sharing webapp, where user's can share notes and see other's notes.
 *Start the client*
    Before starting client make sure that server is up and then run following commands in `client` directory to start the client:
    ```bash
-   
    npm start
    ```
    Now our client will start at `http://localhost:8080`
