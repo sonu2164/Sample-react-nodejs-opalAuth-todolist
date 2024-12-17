@@ -1,0 +1,9 @@
+{
+    "name": "React + Node.js Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+    "forwardPorts": [
+        3000,
+        3001
+    ],
+    "postCreateCommand": "cd client && npm install && cd ../backend && npm install"
+}
