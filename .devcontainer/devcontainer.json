@@ -25,5 +25,5 @@
             ]
         }
     },
-    "postCreateCommand": "npm install --prefix client && npm install --prefix server && python setup.py install"
+    "postCreateCommand": "if [ -d \"client\" ]; then npm install --prefix client; fi && if [ -d \"server\" ]; then npm install --prefix server; fi && if [ -f \"setup.py\" ]; then python setup.py install; fi"
 }
