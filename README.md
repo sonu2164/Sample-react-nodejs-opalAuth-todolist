@@ -11,9 +11,9 @@ It is a note sharing webapp, where user's can share notes and see other's notes.
 2. **Create the Workspace**:  
    ```bash  
    daytona create https://github.com/sonu2164/Sample-react-nodejs-opalAuth-todolist
-   ```  
+   ```
+   ![image](https://github.com/user-attachments/assets/71032de5-f688-4fa1-9b4e-ae566def309f)
 
-... MORE STEPS IF NEEDED ...
 
 4. **Start the Application**:  
    *Start the server*
@@ -31,10 +31,18 @@ It is a note sharing webapp, where user's can share notes and see other's notes.
    ```bash
    npm start
    ```
-   Now our client will start at `http://localhost:8080`
+   Now our client will start at `http://localhost:3000`
 
 
 ---
+
+*Schreenshots*
+![image](https://github.com/user-attachments/assets/021e5344-6e17-4185-a370-1abd144be59d)
+![image](https://github.com/user-attachments/assets/1d480326-ec80-40d0-9d1d-5e525f5f394b)
+![image](https://github.com/user-attachments/assets/11b515ae-50cf-443d-b2c5-0e026d82437f)
+
+
+
 
 ## License
 This project is licensed under the Apache License. See the [LICENSE](LICENSE) file for details.
