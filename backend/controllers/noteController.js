@@ -27,10 +27,15 @@ exports.getNotes = async (req, res) => {
         res.status(500).send('Server Error');
     }
 };
-
 exports.deleteNote = async (req, res) => {
     try {
-        const note = await Note.findById(req.params.id);
+        const noteId = req.body.noteId;
+
+        if (!noteId) {
+            return res.status(400).json({ msg: 'Note ID is required' });
+        }
+
+        const note = await Note.findById(noteId);
 
         if (!note) {
             return res.status(404).json({ msg: 'Note not found' });
@@ -40,10 +45,12 @@ exports.deleteNote = async (req, res) => {
             return res.status(401).json({ msg: 'Not authorized' });
         }
 
-        await note.remove();
-        res.json({ msg: 'Note removed' });
+        // Delete the note
+        await Note.findByIdAndDelete(noteId);
+
+        return res.json({ msg: 'Note removed' });
     } catch (err) {
         console.error(err.message);
-        res.status(500).send('Server Error');
+        return res.status(500).json({ msg: 'Server Error' });
     }
 };

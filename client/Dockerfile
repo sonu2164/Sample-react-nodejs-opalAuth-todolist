@@ -16,7 +16,7 @@ RUN npm install
 COPY . .
 
 # Expose the development server's port
-EXPOSE 8080
+EXPOSE 3000
 
 # Command to run the React development server
 CMD ["npm", "run", "dev"]

@@ -1,7 +1,7 @@
 /* Login.css */
 
 .login-container {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -12,7 +12,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 60vh;
     justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
 }
+
+
 
 .register-link {
     color: #f5ba13;

@@ -10,7 +10,7 @@ const {
 router.get('/', auth, getNotes);
 router.post('/', auth, createNote);
 router.post('/update', auth, createNote);
-router.post('/delete', auth, createNote);
+router.post('/deletenote', auth, deleteNote);
 // router.delete('/:id', auth, deleteNote);
 
 module.exports = router;

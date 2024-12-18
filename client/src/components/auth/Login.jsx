@@ -54,31 +54,35 @@ const Login = ({ setIsAuthenticated, setShowRegister }) => {
     return (
         <div className="login-container">
             <h1>Sign In</h1>
-            <form onSubmit={(e) => onSubmit(e)}>
-                <div className="form-group">
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                        name="email"
-                        value={email}
-                        onChange={(e) => onChange(e)}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        name="password"
-                        value={password}
-                        onChange={(e) => onChange(e)}
-                        minLength="6"
-                    />
-                </div>
-                <div className="form-group">
-                    <input type="submit" value="Login" />
-                </div>
-            </form>
+            <div className='form-container'>
+
+
+                <form onSubmit={(e) => onSubmit(e)}>
+                    <div className="form-group">
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            name="email"
+                            value={email}
+                            onChange={(e) => onChange(e)}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                            value={password}
+                            onChange={(e) => onChange(e)}
+                            minLength="6"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <input type="submit" value="Login" />
+                    </div>
+                </form>
+            </div>
             <div>Not registered ? <span onClick={handleClick} className='register-link'>Register</span></div>
 
         </div>

@@ -73,7 +73,11 @@ const App = () => {
 
   const deleteNote = async (id) => {
     try {
-      await axios.post(`/api/notes/delete`, { noteId: id }, config);
+      console.log("idtodelete", id);
+      console.log(notes);
+
+
+      await axios.post(`/api/notes/deletenote`, { noteId: id }, config);
       getNotes();
       toast.success('Note deleted successfully');
     } catch (err) {
@@ -102,7 +106,7 @@ const App = () => {
             <Note
               key={index}
               ind={index}
-              id={note.id}
+              id={note._id}
               title={note.title}
               content={note.description}
               deleteNote={deleteNote}
