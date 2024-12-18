@@ -34,6 +34,7 @@ const App = () => {
     if (token) {
       setIsAuthenticated(true);
       getNotes();
+      console.log(notes);
     }
   }, [isAuthenticated]);
 
@@ -108,7 +109,7 @@ const App = () => {
               ind={index}
               id={note._id}
               title={note.title}
-              content={note.description}
+              content={note.content}
               deleteNote={deleteNote}
               updateNote={updateNote}
             />
